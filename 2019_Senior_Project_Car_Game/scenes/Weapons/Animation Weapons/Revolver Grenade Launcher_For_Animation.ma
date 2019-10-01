@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Revolver Grenade Launcher_For_Animation.ma
-//Last modified: Tue, Oct 01, 2019 02:26:53 PM
+//Last modified: Tue, Oct 01, 2019 03:33:08 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -6748,22 +6748,22 @@ createNode nurbsCurve -n "Gun_Mount:Left_Door_CrtlShape" -p "Gun_Mount:Left_Door
 		0.69934618841502871 -0.23602092634532668 -2.3602466583251953
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "47C4F9FE-4EDD-D609-C921-D1969494147B";
+	rename -uid "F98AA6A0-4FDE-9FA4-845B-C6A35CE2B143";
 	setAttr -s 563 ".lnk";
 	setAttr -s 563 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8E5FDD1F-441B-5B09-1823-CE84182CB6B6";
+	rename -uid "A547B04D-4574-4EFD-6AEC-DAAC4C594785";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B83F58E7-46A6-62F3-A5DB-11A8EAF1520C";
+	rename -uid "A2992091-4877-9852-1827-C4B3F8F9CDE1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "49FD03D3-4B67-25E5-9C7B-2DB9A9AD06B4";
+	rename -uid "14CF4167-4FDA-C639-38F0-51988D62B71D";
 	setAttr -s 19 ".dli[1:18]"  1 2 3 4 5 6 7 8 
 		9 10 11 12 13 14 15 16 17 18;
 	setAttr -s 19 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C3355B3A-4176-D552-737B-D7A2DF16B179";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "97A12C15-41DF-CDE5-4A24-3593B1B06AF6";
+	rename -uid "90CFEAEE-4834-0A54-885C-A986B6E61B44";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8C2D7431-46D1-545C-34FE-6B8B8E9DD714";
 	setAttr ".g" yes;
@@ -14137,8 +14137,8 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ebm" yes;
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "D:/2019-Senior-Game-Project/2019_Senior_Project_Car_Game/scenes/Weapons/Full Animation Exports";
-	setAttr ".exf" -type "string" "Revolver_Launcher_With_Mount_Animation_EX";
+	setAttr ".exp" -type "string" "D:/2019-Senior-Game-Project/2019_Senior_Project_Car_Game/scenes/Weapons/Animation Weapons";
+	setAttr ".exf" -type "string" "Revolver_Launcher_Animation_EX";
 createNode gameFbxExporter -n "gameExporterPreset3";
 	rename -uid "067C8854-4D58-4C95-9028-8FA7AA8FCCA5";
 	setAttr ".pn" -type "string" "TE Anim Default";
@@ -14194,8 +14194,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Gun_Mount_rotateX.o" "Gun_Mount:Gun_Mount.rx";
 connectAttr "Gun_Mount_rotateY.o" "Gun_Mount:Gun_Mount.ry";
 connectAttr "Gun_Mount_rotateZ.o" "Gun_Mount:Gun_Mount.rz";
