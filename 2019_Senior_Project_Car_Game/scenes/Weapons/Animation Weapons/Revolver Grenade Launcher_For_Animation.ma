@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Revolver Grenade Launcher_For_Animation.ma
-//Last modified: Thu, Oct 03, 2019 04:14:39 PM
+//Last modified: Thu, Oct 03, 2019 04:22:20 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "05B11629-4002-0AC1-9972-16A4C98A83D7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.0925731763843238 0.18707525383172108 -0.24112025654617142 ;
-	setAttr ".r" -type "double3" 26.661647327483109 -824.99999999990393 0 ;
+	setAttr ".t" -type "double3" -8.6372588079745238 7.8597403109033372 -2.9335575061020398 ;
+	setAttr ".r" -type "double3" -17.138352672464066 -840.99999999988029 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EC69DCA2-4686-24EE-CE8D-2687BDBAFEC5";
 	setAttr -k off ".v" no;
@@ -14160,7 +14160,7 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ft" 1;
 	setAttr ".fv" -type "string" "FBX201800";
 	setAttr ".exp" -type "string" "D:/2019-Senior-Game-Project/2019_Senior_Project_Car_Game/scenes/Weapons/Animation Weapons";
-	setAttr ".exf" -type "string" "Revolver_Launcher_Animation_EX";
+	setAttr ".exf" -type "string" "Revolver_Launcher_UV_Map_and_Animation_EX";
 createNode gameFbxExporter -n "gameExporterPreset3";
 	rename -uid "067C8854-4D58-4C95-9028-8FA7AA8FCCA5";
 	setAttr ".pn" -type "string" "TE Anim Default";
