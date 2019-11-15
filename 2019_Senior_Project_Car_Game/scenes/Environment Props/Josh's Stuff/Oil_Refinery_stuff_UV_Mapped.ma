@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Oil_Refinery_stuff_UV_Mapped.ma
-//Last modified: Thu, Nov 14, 2019 02:24:49 PM
+//Last modified: Thu, Nov 14, 2019 03:18:20 PM
 //Codeset: 1252
 requires maya "2018";
 requires -nodeType "lightEditor" "renderSetup.py" "1.0";
@@ -16,13 +16,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "572F1658-4C34-D03E-A080-B3AC3364ECEC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.062790528909343 10.559326850629414 8.0618444665783819 ;
-	setAttr ".r" -type "double3" -45.93835273411635 2522.5999999992405 0 ;
+	setAttr ".t" -type "double3" 16.638202153824643 20.769545905172343 18.508188992380258 ;
+	setAttr ".r" -type "double3" -52.538352734116351 2522.1999999992404 1.9893129658549554e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "64FBF086-4A2D-E5EA-66E3-79AC1EA516CC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.228654734144142;
+	setAttr ".coi" 27.179168927373702;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
