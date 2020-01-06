@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Ruger Model 03.ma
-//Last modified: Mon, Jan 06, 2020 03:39:03 PM
+//Last modified: Mon, Jan 06, 2020 03:41:04 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,14 +15,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "ECBACBA2-4003-BA16-AD7F-579B1A247E20";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.167113631761902 -9.0453621212778259 -0.48506730323826508 ;
-	setAttr ".r" -type "double3" 471.86164727578199 -973.39999999988936 0 ;
+	setAttr ".t" -type "double3" 41.552246047565909 -1.7904308800975599 42.534869776251256 ;
+	setAttr ".r" -type "double3" 354.26164727503362 -1031.799999999698 -5.9647406980261691e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B184F299-4262-9E71-41BD-76AB7DC2E8B4";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.190334669498107;
+	setAttr ".coi" 58.839384916313136;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1229,7 +1229,6 @@ createNode mesh -n "Rear_SightShape" -p "Rear_Sight";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Upper_Reciever_and_Barrel1";
 	rename -uid "5327B5BC-43C2-C26A-737B-CBB2B642C256";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" -5.9604644775390625e-07 0.16643643379211426 -0.23419189453125 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-07 0.16643643379211426 -0.23419189453125 ;
 createNode mesh -n "Upper_Reciever_and_Barrel1Shape" -p "Upper_Reciever_and_Barrel1";
@@ -8048,7 +8047,6 @@ createNode mesh -n "Takedown_buttonShape" -p "Takedown_button";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Frame1";
 	rename -uid "A0B80C55-4B26-EFF9-2D80-C8B2C4CE8308";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" -0.0015292167663574219 -12.430382251739502 -7.7995753288269043 ;
 	setAttr ".sp" -type "double3" -0.0015292167663574219 -12.430382251739502 -7.7995753288269043 ;
 createNode mesh -n "Frame1Shape" -p "Frame1";
@@ -14573,7 +14571,6 @@ createNode mesh -n "polySurfaceShape2" -p "Frame1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Left_Grip";
 	rename -uid "15C52567-4A08-6B86-98E1-A1AF89317FD5";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 2.4367345108183711 -13.006888905305317 -12.994921387826439 ;
 	setAttr ".s" -type "double3" 0.5 20 6.9619752780296968 ;
 createNode mesh -n "Left_GripShape" -p "Left_Grip";
@@ -14607,13 +14604,13 @@ createNode mesh -n "Top_RailShape" -p "Top_Rail";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 1 ;
+	setAttr ".pv" -type "double2" 0.38858696818351746 0.5625 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 3 ".pt";
+	setAttr -s 9 ".pt";
 	setAttr ".pt[404]" -type "float3" 0 2.9802322e-08 0 ;
 	setAttr ".pt[405]" -type "float3" 0 2.9802322e-08 0 ;
 createNode lightLinker -s -n "lightLinker1";
@@ -16640,6 +16637,35 @@ createNode polyTweak -n "polyTweak22";
 	setAttr ".tk[403]" -type "float3" 0 0.095365368 0.012285097 ;
 	setAttr ".tk[404]" -type "float3" 0 0.095312864 -0.012284283 ;
 	setAttr ".tk[405]" -type "float3" 0 0.095312864 -0.012284283 ;
+createNode polySplit -n "polySplit25";
+	rename -uid "F5F849A6-47A2-CBA3-991B-FC99E0A350F0";
+	setAttr -s 2 ".e[0:1]"  1 1;
+	setAttr -s 2 ".d[0:1]"  -2147482856 -2147482851;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit26";
+	rename -uid "57498C97-46D6-3A24-C40B-F1BD13BEF377";
+	setAttr -s 2 ".e[0:1]"  1 1;
+	setAttr -s 2 ".d[0:1]"  -2147482854 -2147482849;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit27";
+	rename -uid "3628EBBC-43BA-0EDE-AA8B-15825E6AEC77";
+	setAttr -s 40 ".e[0:39]"  0 0.89708799 0.89708799 0 0.85835302 0.79809499
+		 1 0.75936198 0.75936198 0 0.720626 0.66036803 1 0.62163401 0.62163401 0 0.58289897
+		 0.522641 1 0.48390701 0.48390701 0 0.44517201 0.38491401 1 0.34617999 0.34617999
+		 0 0.30744401 0.24718601 1 0.208452 0.208452 0 0.169717 0.109459 1 0.070724003 0.070724003
+		 0;
+	setAttr -s 40 ".d[0:39]"  -2147483451 -2147482847 -2147482846 -2147483391 -2147482846 -2147482847 
+		-2147483451 -2147482847 -2147482846 -2147483390 -2147482846 -2147482847 -2147483450 -2147482847 -2147482846 -2147483389 -2147482846 -2147482847 
+		-2147483449 -2147482847 -2147482846 -2147483388 -2147482846 -2147482847 -2147483448 -2147482847 -2147482846 -2147483387 -2147482846 -2147482847 
+		-2147483447 -2147482847 -2147482846 -2147483386 -2147482846 -2147482847 -2147483446 -2147482847 -2147482846 -2147483385;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyDelEdge -n "polyDelEdge5";
+	rename -uid "5B7957B3-426A-AAF5-073E-EAB1286F4CE4";
+	setAttr ".ics" -type "componentList" 6 "e[832:834]" "e[838:840]" "e[844:846]" "e[850:852]" "e[856:858]" "e[862:864]";
+	setAttr ".cv" yes;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -16764,7 +16790,7 @@ connectAttr "polyTweakUV2.uvtk[0]" "Upper_Reciever_and_Barrel1Shape.uvst[0].uvtw
 		;
 connectAttr "polySplit16.out" "Frame1Shape.i";
 connectAttr "polySplit21.out" "Left_GripShape.i";
-connectAttr "polyCloseBorder1.out" "Top_RailShape.i";
+connectAttr "polyDelEdge5.out" "Top_RailShape.i";
 connectAttr "polyTweakUV6.uvtk[0]" "Top_RailShape.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -16873,6 +16899,10 @@ connectAttr "Top_RailShape.wm" "polyMergeVert6.mp";
 connectAttr "polyTweakUV6.out" "polyTweak21.ip";
 connectAttr "polyTweak22.out" "polyCloseBorder1.ip";
 connectAttr "polyMergeVert6.out" "polyTweak22.ip";
+connectAttr "polyCloseBorder1.out" "polySplit25.ip";
+connectAttr "polySplit25.out" "polySplit26.ip";
+connectAttr "polySplit26.out" "polySplit27.ip";
+connectAttr "polySplit27.out" "polyDelEdge5.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Front_SightShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Rear_SightShape.iog" ":initialShadingGroup.dsm" -na;
